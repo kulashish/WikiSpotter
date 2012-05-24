@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pageflow:Pageflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pageflow="http://www.sybase.com/suade/pageflow" id="pf13321657026420" configfile="/WikiSpotter/WebContent/WEB-INF/faces-config.xml">
+  <nodes xsi:type="pageflow:PFPage" name="Pages/search.xhtml" x="36" y="72" id="pf13321658003881" referenceLink="//@navigationRule.0/@fromViewId|" outlinks="pf13321658276893" path="/Pages/search.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="Pages/results.xhtml" x="477" y="270" id="pf13321658003882" referenceLink="//@navigationRule.0/@navigationCase.0/@toViewId|" inlinks="pf13321658276893" path="/Pages/results.xhtml"/>
+  <links id="pf13321658276893" target="pf13321658003882" source="pf13321658003881" outcome="success"/>
+</pageflow:Pageflow>

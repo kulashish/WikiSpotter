@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='windows-1252'?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<f:view xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+	<html xmlns="http://www.w3.org/1999/xhtml">
+<h:head>
+	<title>results</title>
+</h:head>
+<h:body>
+	<h:form>
+		<table cellspacing="2" cellpadding="3" border="0" width="100%">
+			<tr>
+				<td height="25">&nbsp;</td>
+			</tr>
+			<tr>
+				<td width="100%" align="center" valign="middle">
+					<p>
+						<h:graphicImage url="/Images/Search2.png" height="64" width="64" />
+					</p>
+
+					<p>
+						<h:inputText id="txtSearchQuery" value="#{SpotterBean.term}"
+							size="100" />
+					</p>
+
+					<p>
+						<h:commandButton value="Search" id="btnSearch"
+							action="#{SpotterBean.btnSearch_action}" />
+					</p> <br></br> <h:outputText value="#{SpotterBean.result.count}" />
+					artifacts found
+					<hr></hr>
+				</td>
+			</tr>
+			<tr>
+				<td width="100%"><h:dataTable rows="100"
+						value="#{SpotterBean.result.terms}" var="resultEntry">
+						<!--oracle-jdev-comment:Faces.RI.DT.Class.Key:in.ac.iitb.ram.isearch.web.Search-->
+						<h:column>
+							<h:outputText value="#{resultEntry.id}" />
+						</h:column>
+						<h:column>
+							<h:outputText value="#{resultEntry.term}" />
+						</h:column>
+						<h:column>
+							<h:dataTable rows="100" value="#{resultEntry.links}" var="link">
+								<h:column>
+									<h:link outcome="http://en.wikipedia.org/wiki/#{link}"
+										value="#{link}"></h:link>
+								</h:column>
+							</h:dataTable>
+						</h:column>
+						<br></br>
+					</h:dataTable></td>
+			</tr>
+			<tr>
+				<td width="100%">&nbsp;</td>
+			</tr>
+		</table>
+	</h:form>
+</h:body>
+	</html>
+	<!--oracle-jdev-comment:preferred-managed-bean-name:SearchBean-->
+</f:view>

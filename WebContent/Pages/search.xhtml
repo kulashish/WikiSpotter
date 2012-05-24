@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='windows-1252'?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:h="http://java.sun.com/jsf/html">
+    <html xmlns="http://www.w3.org/1999/xhtml">
+        <h:head>
+            <title>search</title>
+        </h:head>
+        <h:body>
+            <h:form>
+              <table width="100%" height="100%">
+                    <tr>
+                        <td height="25">
+                            &nbsp;
+                        </td>
+                    </tr><tr>
+                        <td height="207" valign="middle" align="center">
+                            <p>
+                                <h:graphicImage url="/Images/Search2.png" height="64" width="64"/>
+                            </p>
+                            <p>
+                                <h:inputText id="txtSearchQuery" value="#{SpotterBean.term}" size="100"/><br/>
+                            </p>
+                            <p>
+                                <h:commandButton value="Search" id="btnSearch" action="#{SpotterBean.btnSearch_action}"/>
+                            </p>
+                        </td>
+                    </tr><tr>
+                  <td>
+                            <p>
+                                &nbsp;
+                            </p>
+                        </td>
+                </tr>
+              </table>
+            </h:form>
+        </h:body>
+    </html>
+    <!--oracle-jdev-comment:preferred-managed-bean-name:SearchBean-->
+</f:view>
